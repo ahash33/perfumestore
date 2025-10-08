@@ -13,8 +13,8 @@ from .forms import ContactForm
 def basic(request):
     return HttpResponse("hello,dgango")
 
-def home(request):
-    return render(request,'home.html')
+def index(request):
+    return render(request,'index.html')
 
 def about(request):
     return render(request,'about.html')
@@ -42,7 +42,7 @@ def login_view(request):
 
         if user is not None:
             login(request, user)   # logs in the user
-            return redirect("home")
+            return redirect("index")
         else:
             messages.error(request, "Invalid username or password")
 
@@ -81,7 +81,7 @@ def signup_view(request):
 
         # auto-login after signup
         login(request, user)
-        return redirect("home")
+        return redirect("index")
 
     return render(request, "signup.html")
 

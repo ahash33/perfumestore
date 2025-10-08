@@ -4,7 +4,7 @@ from .views import contact_view
 
 urlpatterns = [
     path('', views.basic, name='basic'),
-    path('home/', views.home, name='home'),
+    path('index/', views.index, name='index'),
     path('about/', views.about, name='about'),
     path('collection/', views.collection, name='collection'),
     path('shop/', views.shop, name='shop'),
