@@ -1,0 +1,9 @@
+{% extends 'home.html' %}
+{% block title %} order succes {% endblock %}
+{% block content %}
+<div class="bg-light text-center py-5" style="height: 500px;">
+  <h2>✅ Your order has been placed successfully!</h2>
+  <p>You will receive a confirmation email shortly.</p>
+    <a href="{% url 'home' %}" class="btn btn-danger mt-3">Return to Home</a>
+</div>
+{% endblock %}

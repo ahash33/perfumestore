@@ -1,0 +1,28 @@
+<div class="navbar navbar-expand-md navbar-dark p-3" style="background-color:black;">
+  <div class="container-xl">
+    <img style="width: 150px;" src="https://dynamic.design.com/asset/logo/d7ee0205-5545-423d-a7a0-e8d423d1595c/logo-search-grid-2x?logoTemplateVersion=1&v=638926733479570000&text=perfume&layout=auto" alt="">
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#links"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse justify-content-end" id="links">
+      <ul class="navbar-nav" style="gap: 10px;">
+        <li class="nav-item">
+          <a href="{% url 'home' %}" class="nav-link fw-bold text-light">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'about' %}" class="nav-link fw-bold text-light">about</a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'collection' %}" class="nav-link fw-bold text-light">collections</a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'shop' %}" class="nav-link fw-bold text-light">shop</a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'contact' %}" class="nav-link fw-bold text-light">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'logout' %}" class="nav-link btn btn-danger text-white fw-bold">logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

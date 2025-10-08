@@ -1,0 +1,169 @@
+.hero {
+    background: url('https://cdn.pixabay.com/photo/2020/04/19/01/15/perfume-5061479_1280.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.product-card img {
+    height: 250px;
+    object-fit: cover;
+}
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+#product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.wow{
+    background-color: F2F2F2;
+}
+#navbar {
+      background-color: black;
+    }
+
+.cart-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card {
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-order {
+    background-color: #d2691e;
+    color: white;
+    width: 100%;
+}
+
+.btn-order:hover {
+    background-color: #a0522d;
+}
+
+/* about members */
+
+.member-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 100%;
+}
+.member-card p {
+    font-size: 15px;
+    color: #ddd;
+}
+.member-info {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.member-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+}
+.member-name {
+    font-weight: 700;
+    margin: 0;
+}
+.member-role {
+    font-size: 14px;
+    color: #aaa;
+    margin: 0;
+}
+.men{
+    background-color: black;
+    color: white;
+}
+.gallery-thumbs img {
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .gallery-thumbs img:hover,
+        .gallery-thumbs img.active {
+            border: 2px solid #ffc107;
+            /* highlight */
+        }
+
+        .main-image img {
+            border-radius: 12px;
+            width: 100%;
+        }
+
+/* About Section */
+
+.about-section {
+      padding: 60px 20px;
+    }
+    .about-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #444;
+    }
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .highlight {
+      color: #b8860b; 
+      font-weight: bold;
+    }
+    .about-img {
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    }
+
+/* Contact Section */
+
+.contact{
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 12px;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+}
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.contact button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}

@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+{% block title %} collection {% endblock %}
+{% block content %}
+<div class="container">
+    <h2 class="text-center mt-4">Our Perfume Collections</h2>
+    <p class="text-center mb-4">Explore our diverse range of perfume collections tailored to your unique style and preferences.</p>
+    <div class="row my-4 w-100">
+        {% for i in post %}
+            <div id="how" class="col-md-4">
+                <div class="card gap-3 mb-4">
+                    <img style="height: 300px;" src="{{ i.img_url }}" class="card-img-top object-fit-cover" alt="Floral Perfumes">
+                    <div class="card-body">
+                        <h5 class="card-title">{{i.title}}</h5>
+                        <p class="card-text">{{i.content | truncatewords:10}}</p>
+                        <a href="{% url 'detail' post_id=i.id %}" class="btn btn-primary">mere details</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}

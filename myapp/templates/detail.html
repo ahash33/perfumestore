@@ -1,0 +1,52 @@
+{% extends 'home.html' %}
+{% block title %}Detail Page{% endblock %}
+{% block content %}
+
+<style>
+    .product-img {
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e15360;
+}
+.btn-buy {
+    background: #e15360;
+    color: #fff;
+}
+.btn-buy:hover {
+    background: #dc143c;
+}
+</style>
+
+<div class="container my-5">
+  <div class="row g-5">
+    <!-- Product Image -->
+    <div class="col-md-6">
+      <img height="300" src="{{post.img_url}}" class="img-fluid product-img" alt="Perfume">
+    </div>
+
+    <!-- Product Details -->
+    <div class="col-md-6">
+      <h2 class="fw-bold">{{post.title | default:"no title available"}}</h2>
+      <p class="text-muted">Eau de Parfum - 100ml</p>
+      <p class="price">₹2,999</p>
+
+      <p>{{post.content}}</p>
+
+      <ul class="list-unstyled">
+        <li>✔ Long-lasting fragrance</li>
+        <li>✔ 100ml Premium Bottle</li>
+        <li>✔ Free Shipping Available</li>
+      </ul>
+
+      <div class="d-flex gap-3 mt-4">
+        <a href="{% url 'order' %}" class="btn btn-buy px-4">Buy Now</a>
+        <a href="{% url 'shop' %}" class="btn btn-outline-dark px-4">more collections</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

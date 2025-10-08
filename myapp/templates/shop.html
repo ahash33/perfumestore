@@ -1,0 +1,346 @@
+{% extends 'home.html' %}
+{% block title %}
+  shop
+{% endblock %}
+{% block content %}
+  <style>
+    body {
+      background: #f5efe6;
+    }
+  </style>
+  {% comment %} <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand" href="#">☕ Coffee Shop</a> -->
+      <div class="d-flex">
+        <span class="text-white me-2"><i class="bi bi-cart"></i> Cart (<span id="cart-count">0</span>)</span>
+      </div>
+    </div>
+  </nav> {% endcomment %}
+
+  <div class="container-fluid mt-4 mb-4">
+    <div class="row">
+      <!-- Products -->
+      <div class="col-md-12">
+        <div class="row g-4">
+          <!-- Product 1 -->
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://omade.store/wp-content/uploads/2022/09/6-1.jpg" class="card-img-top" alt="Perfume 1" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Velour Essence</h5>
+                <p class="price">₹499.99</p>
+                <p class="rating">★★★★☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Velour Essence" data-price="499.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Product 2 -->
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://rukminim2.flixcart.com/image/704/844/xif0q/perfume/6/o/1/100-spice-perfume-for-men-women-fruity-woody-notes-long-lasting-original-imahbqtascdqw7wx.jpeg?q=90&crop=false" class="card-img-top" alt="Perfume 2" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Mystic Bloom</h5>
+                <p class="price">₹599.99</p>
+                <p class="rating">★★★★★</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Mystic Bloom" data-price="599.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- product 3 -->
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img height="300" src="https://static.wixstatic.com/media/234a2f_462ee8533d2049d5a69e3bd9e04e0f51~mv2.webp/v1/fill/w_980,h_1047,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/234a2f_462ee8533d2049d5a69e3bd9e04e0f51~mv2.webp" class="card-img-top" alt="Perfume 3" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Eternal Whisper</h5>
+                <p class="price">₹699.99</p>
+                <p class="rating">★★★☆☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Eternal Whisper" data-price="699.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- prodect 4 -->
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://lafrenchperfumes.com/cdn/shop/files/4_eed41cc4-6a77-40c3-a4b5-3825e963d90d.jpg?v=1742287259" class="card-img-top" alt="Perfume 4" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Celeste Noir</h5>
+                <p class="price">₹799.99</p>
+                <p class="rating">★★★★★</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Celeste Noir" data-price="799.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- prodect 5 -->
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://i.etsystatic.com/30668911/r/il/c08660/6366056714/il_fullxfull.6366056714_eoxd.jpg" class="card-img-top" alt="Perfume 5" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Amber Glow</h5>
+                <p class="price">₹549.99</p>
+                <p class="rating">★★★★☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Amber Glow" data-price="549.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- product 6 -->
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://leshop.pk/cdn/shop/files/IMG-20241226-WA0043.jpg?v=1735305942" class="card-img-top" alt="Perfume 6" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Moonlit Desire</h5>
+                <p class="price">₹649.99</p>
+                <p class="rating">★★★☆☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Moonlit Desire" data-price="649.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- product 7 -->
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://rukminim2.flixcart.com/image/480/640/xif0q/perfume/l/8/s/100-mystic-bloom-perfume-for-women-floral-musky-notes-long-original-imahbyjrucvvmcb5.jpeg?q=90" class="card-img-top" alt="Perfume 6" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Luxe Petals</h5>
+                <p class="price">₹399.99</p>
+                <p class="rating">★★★★☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Luxe Petals" data-price="399.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- product 8 -->
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://scenjesty.com/cdn/shop/files/ccc.jpg?v=1733299589" class="card-img-top" alt="Perfume 6" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Crimson Aura</h5>
+                <p class="price">₹499.99</p>
+                <p class="rating">★★★☆☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Crimson Aura" data-price="499.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- product 9 -->
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://sophia-mae.com/cdn/shop/files/83.jpg?v=1757964107" class="card-img-top" alt="Perfume 6" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Golden Mirage</h5>
+                <p class="price">₹499.99</p>
+                <p class="rating">★★★★☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Golden Mirage" data-price="499.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- product 10 -->
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://www.hollywoodreporter.com/wp-content/uploads/2023/04/F007_LCP_GRIS_DIOR_23_P02G_Hero_solo_L4_F39.png" class="card-img-top" alt="Perfume 6" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Whispering Woods</h5>
+                <p class="price">₹1,552.99</p>
+                <p class="rating">★★★☆☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Whispering Woods" data-price="1,552.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- product 11 -->
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://assets.myntassets.com/w_412,q_30,dpr_3,fl_progressive,f_webp/assets/images/32402283/2025/5/20/ed3f412f-eb32-4da7-b94b-f276c7bef6651747748348992-La-French-Unisex-Ocean-Long-Lasting-Aqua-Fresh-Fragrance-Per-1.jpg" class="card-img-top" alt="Perfume 6" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Sapphire Mist</h5>
+                <p class="price">₹799.99</p>
+                <p class="rating">★★☆☆☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Sapphire Mist" data-price="799.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- product 12 -->
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://img.ws.mms.shopee.ph/39cc03fb6c684608f0939266bf52df11" class="card-img-top" alt="Perfume 6" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Velvet Secret</h5>
+                <p class="price">₹1619.99</p>
+                <p class="rating">★★★★☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Velvet Secret" data-price="1619.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- product 13 -->
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://perfumeunlimited.com/media/catalog/product/cache/426571a213995d0f26cf05297c4bc27d/g/i/giorgio_royal_bloom_u_edp_100ml.jpg" class="card-img-top" alt="Perfume 6" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Royal Bloom</h5>
+                <p class="price">₹399.99</p>
+                <p class="rating">★★★☆☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Royal Bloom" data-price="399.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- product 14 -->
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://infinitybeauty.in/cdn/shop/files/1_8.jpg?v=1739611768" class="card-img-top" alt="Perfume 6" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Infinite Grace</h5>
+                <p class="price">₹899.99</p>
+                <p class="rating">★★☆☆☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Infinite Grace" data-price="899.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- product 15 -->
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://www.myperfumeshop.com.au/cdn/shop/files/xerjoff-shooting-stars-starlight-parfum-perfume-cologne-697333.jpg?v=1716570664&width=1850" class="card-img-top" alt="Perfume 6" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Starlit Harmony</h5>
+                <p class="price">₹1999.99</p>
+                <p class="rating">★★★★☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Starlit Harmony" data-price="1999.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- product 16 -->
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/a9c5ebe7-2b27-4cba-973f-ebcc65d111e4.__CR0,0,970,600_PT0_SX970_V1___.png" class="card-img-top" alt="Perfume 6" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Blissful Dusk</h5>
+                <p class="price">₹2,799.99</p>
+                <p class="rating">★★★☆☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Blissful Dusk" data-price="2,799.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- product 17 -->
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://img.freepik.com/premium-photo/bottle-perfume-with-blue-flower-front_920866-17.jpg" class="card-img-top" alt="Perfume 6" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Enchanted Veil</h5>
+                <p class="price">₹799.99</p>
+                <p class="rating">★★★☆☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Enchanted Veil" data-price="799.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- product 18 -->
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWeOC9xUwYJSQQMyIV-i2VqQ4J-4waPUabJ1Hvszskjw&s&ec=73068123" class="card-img-top" alt="Perfume 6" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Opal Serenity</h5>
+                <p class="price">₹999.99</p>
+                <p class="rating">★★★★☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Opal Serenity" data-price="999.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+           <!-- product 19 -->
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://www.fnp.com/images/pr/l/v20240603134034/timeless-charm-perfume-duo_1.jpg" class="card-img-top" alt="Perfume 6" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Timeless Charm</h5>
+                <p class="price">₹299.99</p>
+                <p class="rating">★★☆☆☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Timeless Charm" data-price="299.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- product 20 -->
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://m.media-amazon.com/images/I/71ZHHR5SXsL._UF1000,1000_QL80_.jpg" class="card-img-top" alt="Perfume 6" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Radiant Horizon</h5>
+                <p class="price">₹699.99</p>
+                <p class="rating">★★★★☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Radiant Horizon" data-price="699.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- product 21 -->
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img height="300" src="https://m.media-amazon.com/images/I/611+OfxzQRL._UF1000,1000_QL80_.jpg" class="card-img-top" alt="Perfume 6" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Foog</h5>
+                <p class="price">₹299.99</p>
+                <p class="rating">★★★★☆</p>
+                <a href="{% url 'order' %}" class="btn btn-sm btn-danger add-to-cart" data-name="Foog" data-price="299.99">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      {% comment %} <!-- Cart -->
+      <div class="col-md-3">
+        <div class="cart-box">
+          <h5>Your Cart</h5>
+          <ul id="cart-items" class="list-unstyled"></ul>
+          <p>
+            <strong>Total: ₹<span id="cart-total">0</span></strong>
+          </p>
+          <a href="{% url 'order' %}" class="btn btn-danger">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </div> {% endcomment %}
+
+  <!-- Bootstrap JS + Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <script>
+    let cart = []
+    let total = 0
+    
+    document.querySelectorAll('.add-to-cart').forEach((button) => {
+      button.addEventListener('click', function () {
+        const name = this.dataset.name
+        const price = parseInt(this.dataset.price)
+    
+        cart.push({ name, price })
+        total += price
+    
+        updateCart()
+      })
+    })
+    
+    function updateCart() {
+      const cartItems = document.getElementById('cart-items')
+      cartItems.innerHTML = ''
+      cart.forEach((item) => {
+        const li = document.createElement('li')
+        li.textContent = `${item.name} - ₹${item.price}`
+        cartItems.appendChild(li)
+      })
+      document.getElementById('cart-total').textContent = total
+      document.getElementById('cart-count').textContent = cart.length
+    }
+  </script>
+{% endblock %}

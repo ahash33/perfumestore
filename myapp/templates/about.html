@@ -1,0 +1,152 @@
+{% extends 'home.html' %}
+{% block title %}
+  about
+{% endblock %}
+{% block content %}
+  {% comment %} <div class="class">
+    <img src="https://www.dior.com/on/demandware.static/-/Library-Sites-DiorSharedLibrary/default/dwc3911ab9/images/beauty/01-FRAGRANCES/2025/SAUVAGE-10-YEARS-2025/PLPs/DIOR_COM_SAUVAGE_ELIXIR_25_INSTIT_3000x2250px.jpg" height="800" width="100%" alt="" class="mx-auto" />
+  </div> {% endcomment %}
+
+  <header class="hero d-flex align-items-center" style="background: linear-gradient(180deg, rgba(107,79,79,0.08), rgba(214,184,184,0.02)), url('https://t3.ftcdn.net/jpg/14/33/36/50/360_F_1433365011_xBcUAnp8mR1vhFDmNI9Wnzf75HVibPwp.jpg') center/cover no-repeat; padding:6rem 0;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <span class="badge badge-accent mb-3 px-3 py-2">Our Story</span>
+          <h1 class="display-5 fw-bold">Crafting scents that tell your story</h1>
+          <p class="lead text-muted">At Perfumy Store we blend tradition with modern artistry...</p>
+          <a href="{% url 'collection' %}" class="btn btn-danger btn-lg mt-3">Explore Collections</a>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block">
+          <div class="card shadow-sm border-0">
+            <img src="https://cdn.pixabay.com/photo/2023/11/27/16/46/bottle-8415757_1280.jpg" class="card-img-top" alt="Signature bottle" />
+            <div class="card-body">
+              <p class="mb-0 small text-muted">Signature blend: rose, amber & oud — limited release.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container my-5">
+    <div class="row align-items-center g-5">
+      <!-- Left Content -->
+      <div class="col-md-6 mb-4">
+        <h1 class="about-title">About <span class="highlight">Perfumy</span></h1>
+        <p class="about-text">
+          Welcome to <span class="highlight">Perfumy</span>, where fragrances meet passion. Our journey began with a dream to craft timeless perfumes that tell stories of love, elegance, and sophistication.
+        </p>
+        <p class="about-text">Each fragrance is carefully blended using rare ingredients, floral notes, and precious woods. Our perfumers pour their creativity into every bottle, making sure each scent leaves a lasting impression.</p>
+        <p class="about-text">
+          Whether you’re looking for a <span class="highlight">luxurious daily wear</span>
+          or a <span class="highlight">signature evening scent</span>, Perfumy brings you fragrances that redefine elegance.
+        </p>
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-md-6 text-center">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCNtGj_wXDJWEEN9q42qb2cS5kAW5zWX75jqs0hDzv5bZJpdNP9CrOm-KIntO65l5RiJM&usqp=CAU" alt="Perfume Bottles" class="img-fluid about-img" />
+      </div>
+    </div>
+  </div>
+
+  {% comment %}members{% endcomment %}
+  <div class="men">
+    <div class="container py-5">
+      <h2 class="text-center mb-5">Meet Our Perfume Creators</h2>
+      <div class="row g-4">
+        <!-- Member 1 -->
+        <div class="col-md-4">
+          <div class="member-card h-100">
+            <p>Specialist in floral fragrances, crafting delicate blends with roses, jasmine, and orchids.</p>
+            <div class="member-info">
+              <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Member 1" />
+              <div>
+                <p class="member-name">Aarav Mehta</p>
+                <p class="member-role">Floral Perfumer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="col-md-4">
+          <div class="member-card h-100">
+            <p>Expert in woody scents, combining sandalwood, cedar, and musk for timeless elegance.</p>
+            <div class="member-info">
+              <img src="https://randomuser.me/api/portraits/men/34.jpg" alt="Member 2" />
+              <div>
+                <p class="member-name">Rohan Kapoor</p>
+                <p class="member-role">Woody Notes Specialist</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="col-md-4">
+          <div class="member-card h-100">
+            <p>Creates vibrant fruity fragrances with fresh notes of citrus, berries, and tropical blends.</p>
+            <div class="member-info">
+              <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Member 3" />
+              <div>
+                <p class="member-name">Elena Rossi</p>
+                <p class="member-role">Fruity Blend Creator</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 4 -->
+        <div class="col-md-4">
+          <div class="member-card h-100">
+            <p>Master of oriental perfumes, combining exotic spices, amber, and incense for bold aromas.</p>
+            <div class="member-info">
+              <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="Member 4" />
+              <div>
+                <p class="member-name">Nisha Verma</p>
+                <p class="member-role">Oriental Perfumer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 5 -->
+        <div class="col-md-4">
+          <div class="member-card h-100">
+            <p>Innovates fresh aquatic scents with sea breeze, mint, and cool citrus combinations.</p>
+            <div class="member-info">
+              <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Member 5" />
+              <div>
+                <p class="member-name">David Laurent</p>
+                <p class="member-role">Aquatic Perfumer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 6 -->
+        <div class="col-md-4">
+          <div class="member-card h-100">
+            <p>Luxury niche perfumer known for rare ingredients and limited-edition artistic fragrances.</p>
+            <div class="member-info">
+              <img src="https://randomuser.me/api/portraits/women/64.jpg" alt="Member 6" />
+              <div>
+                <p class="member-name">Sophia Martinez</p>
+                <p class="member-role">Luxury Perfumer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-5 text-center">
+    <div class="container">
+      <h3 class="fw-bold">Want to smell our story in person?</h3>
+      <p class="text-muted mb-3">Any details or order a discovery set.</p>
+      <a href="{% url 'contact' %}" class="btn btn-outline-dark btn-lg">Any details</a>
+      <a href="{% url 'shop' %}" class="btn btn-danger btn-lg ms-2">Buy discovery set</a>
+    </div>
+  </section>
+{% endblock %}

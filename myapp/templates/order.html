@@ -1,0 +1,72 @@
+{% extends 'home.html' %}
+{% block title %}
+  Order
+{% endblock %}
+{% block content %}
+
+ <div class="order-card mb-5 mt-5 p-4">
+    <h2 class="text-center mb-4">Place Your Perfume Order</h2>
+    <form method="POST">
+      {% csrf_token %}
+      
+      <!-- Customer Name -->
+      <div class="mb-3">
+        <label class="form-label">Customer Name</label>
+        <input type="text" name="customer_name" class="form-control" placeholder="Enter your name" required>
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" name="email" class="form-control" placeholder="example@gmail.com" required>
+      </div>
+
+      <!-- Perfume Name -->
+      <div class="mb-3">
+        <label class="form-label">Perfume Name</label>
+         <select type="text" class="form-control" name="perfume_name" required>
+            <option value="">-- Select Perfume --</option>
+            <option value="Rose Essence">Velour Essence</option>
+            <option value="Lavender Bliss">Mystic Bloom</option>
+            <option value="Jasmine Bloom">Eternal Whisper</option>
+            <option value="Vanilla Dream">Celeste Noir</option>
+            <option value="Citrus Fresh">Amber Glow</option>
+            <option value="Royal Oud">Moonlit Desire</option>
+            <option value="Mystic Musk">Luxe Petals</option>
+            <option value="Mystic Musk">Crimson Aura</option>
+            <option value="Mystic Musk">Golden Mirage</option>
+            <option value="Mystic Musk">Whispering Woods</option>
+            <option value="Mystic Musk">Sapphire Mist</option>
+            <option value="Mystic Musk">Velvet Secret</option>
+            <option value="Mystic Musk">Royal Bloom</option>
+            <option value="Mystic Musk">Infinite Grace</option>
+            <option value="Mystic Musk">Starlit Harmony</option>
+            <option value="Mystic Musk">Blissful Dusk</option>
+            <option value="Mystic Musk">Enchanted Veil</option>
+            <option value="Mystic Musk">Opal Serenity</option>
+            <option value="Mystic Musk">Timeless Charm</option>
+            <option value="Mystic Musk">Radiant Horizon</option>
+            <option value="Mystic Musk">Foog</option>
+            <option value="Mystic Musk">Attar</option>
+          </select> 
+      </div>
+
+      <!-- Quantity -->
+      <div class="mb-3">
+        <label class="form-label">Quantity</label>
+        <input type="number" name="quantity" class="form-control" value="1" min="1" required>
+      </div>
+
+      <!-- Address -->
+      <div class="mb-3">
+        <label class="form-label">Delivery Address</label>
+        <textarea name="address" class="form-control" rows="3" placeholder="Enter your address" required></textarea>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn btn-danger w-100">Submit Order</button>
+    </form>
+  </div>
+
+
+{% endblock %}
